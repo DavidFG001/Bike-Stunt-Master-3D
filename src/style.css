@@ -1,0 +1,98 @@
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #87ceeb;
+  font-family: system-ui, Arial, sans-serif;
+}
+
+canvas {
+  display: block;
+}
+
+#hud {
+  position: fixed;
+  z-index: 2;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  color: white;
+  text-shadow: 0 2px 5px #000;
+  pointer-events: none;
+}
+
+.brand {
+  font-weight: 900;
+  letter-spacing: 1px;
+  font-size: clamp(16px, 3vw, 25px);
+}
+
+.stats {
+  display: flex;
+  gap: 18px;
+  margin-top: 7px;
+  font-size: 14px;
+}
+
+#message {
+  margin-top: 10px;
+  font-weight: 700;
+}
+
+#controls {
+  position: fixed;
+  z-index: 3;
+  left: 0;
+  right: 0;
+  bottom: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 0 12px;
+}
+
+button {
+  border: 1px solid #ffffff99;
+  border-radius: 16px;
+  background: #101827cc;
+  color: white;
+  font-weight: 900;
+  font-size: 20px;
+  min-width: 58px;
+  min-height: 58px;
+  touch-action: none;
+}
+
+#ride {
+  background: #e43d24;
+  min-width: 90px;
+}
+
+#jump {
+  background: #087eaa;
+}
+
+#help {
+  position: fixed;
+  z-index: 2;
+  bottom: 94px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  text-shadow: 0 2px 4px #000;
+  pointer-events: none;
+}
+
+@media (min-width: 800px) {
+  #controls { bottom: 18px; }
+  button {
+    min-width: 66px;
+    min-height: 60px;
+  }
+}
